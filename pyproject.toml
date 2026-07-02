@@ -1,0 +1,12 @@
+[project]
+name = "agentic-rca-manufacturing"
+version = "0.1.0"
+description = "Agentic anomaly -> root-cause -> abstain loop on the SECOM manufacturing dataset"
+requires-python = ">=3.10"
+dependencies = [
+    "scikit-learn>=1.4",
+    "pandas>=2.0",
+    "numpy>=1.26",
+    "requests>=2.31",
+    "joblib>=1.3",
+]

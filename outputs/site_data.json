@@ -1,0 +1,324 @@
+{
+  "metrics": {
+    "n_train": 1175,
+    "n_test": 392,
+    "fail_prevalence": 0.0664,
+    "n_features_used": 442,
+    "holdout_pr_auc": 0.2467,
+    "holdout_roc_auc": 0.8252,
+    "cv_pr_auc_train": 0.2003,
+    "t_low": 0.0584,
+    "t_high": 0.2451
+  },
+  "thresholds": {
+    "t_low": 0.058,
+    "t_high": 0.245
+  },
+  "holdout_decision_counts": {
+    "FAIL-FLAG": 2,
+    "PASS": 95,
+    "DEFER": 295
+  },
+  "lots": [
+    {
+      "lot": 44,
+      "truth": "PASS",
+      "p_fail": 0.266,
+      "verdict": "DEFER",
+      "reason": "out-of-distribution: 8 sensors beyond 6 sigma of normal production \u2014 outside the training envelope",
+      "signals": [
+        {
+          "sensor": "sensor_298",
+          "z": 6.6
+        },
+        {
+          "sensor": "sensor_163",
+          "z": 6.9
+        },
+        {
+          "sensor": "sensor_064",
+          "z": 2.4
+        },
+        {
+          "sensor": "sensor_103",
+          "z": 1.1
+        },
+        {
+          "sensor": "sensor_164",
+          "z": 7.5
+        }
+      ],
+      "agent": "1. Hypothesis: The pattern of deviations in sensors 163 and 164, which are significantly beyond the normal production range, suggests a potential issue with a specific process step or equipment, possibly indicating a shift or drift in the manufacturing process. The concurrent deviation in sensor 298 may indicate a related or secondary effect.\n2. Next check: Verify the production history and maintenance records of the equipment associated with sensors 163 and 164 to determine if any recent changes, calibrations, or issues may have contributed to these extreme deviations."
+    },
+    {
+      "lot": 238,
+      "truth": "FAIL",
+      "p_fail": 0.264,
+      "verdict": "FAIL-FLAG",
+      "reason": "p_fail=0.26 >= 0.25",
+      "signals": [
+        {
+          "sensor": "sensor_103",
+          "z": 2.2
+        },
+        {
+          "sensor": "sensor_064",
+          "z": 2.3
+        },
+        {
+          "sensor": "sensor_031",
+          "z": 1.8
+        },
+        {
+          "sensor": "sensor_510",
+          "z": 2.0
+        },
+        {
+          "sensor": "sensor_065",
+          "z": 1.9
+        }
+      ],
+      "agent": "1. Hypothesis: The pattern of deviations in sensors 103, 064, 031, 510, and 065 suggests a process deviation that may be related to a specific step or condition in the manufacturing process, potentially indicating a shift in operating parameters. This deviation could be causing a higher risk of defects, leading to the FAIL-FLAG verdict.\n2. Next check: Verify the historical data of sensor_064, which has the largest deviation at +2.3\u03c3, to determine if similar deviations have occurred in the past and if they were associated with failed or passed lots."
+    },
+    {
+      "lot": 209,
+      "truth": "PASS",
+      "p_fail": 0.259,
+      "verdict": "FAIL-FLAG",
+      "reason": "p_fail=0.26 >= 0.25",
+      "signals": [
+        {
+          "sensor": "sensor_059",
+          "z": 2.1
+        },
+        {
+          "sensor": "sensor_081",
+          "z": -2.9
+        },
+        {
+          "sensor": "sensor_103",
+          "z": 1.1
+        },
+        {
+          "sensor": "sensor_213",
+          "z": 1.1
+        },
+        {
+          "sensor": "sensor_351",
+          "z": 1.1
+        }
+      ],
+      "agent": "1. Hypothesis: The pattern of deviations in sensors 059, 081, 103, 213, and 351 suggests a process deviation that may be related to an imbalance or anomaly in the production process, potentially indicating a shift in operating conditions. The significant deviation in sensor_081 (-2.9\u03c3) may be a key indicator of this issue.\n2. Next check: Verify the historical data of sensor_081 to determine if the -2.9\u03c3 deviation is an isolated event or part of a larger trend, and if it correlates with other sensor readings or production outcomes."
+    },
+    {
+      "lot": 1272,
+      "truth": "PASS",
+      "p_fail": 0.224,
+      "verdict": "DEFER",
+      "reason": "uncertain: p_fail=0.22 sits in the abstention band (0.06, 0.25) \u2014 not confident enough to act",
+      "signals": [
+        {
+          "sensor": "sensor_103",
+          "z": 1.2
+        },
+        {
+          "sensor": "sensor_121",
+          "z": 2.9
+        },
+        {
+          "sensor": "sensor_488",
+          "z": 2.4
+        },
+        {
+          "sensor": "sensor_124",
+          "z": 2.7
+        },
+        {
+          "sensor": "sensor_125",
+          "z": 2.0
+        }
+      ],
+      "agent": "1. Hypothesis: The pattern of deviations in sensors 103, 121, 488, 124, and 125 suggests a process deviation that may be related to a specific step or module in the production line, given the multiple sensors showing significant positive deviations. This could indicate an issue with a particular process parameter or equipment setting.\n\n2. Next check: Verify the historical data of sensor_121, which shows the largest deviation at +2.9\u03c3, to determine if this anomaly is a one-time occurrence or a recurring pattern that could indicate a persistent issue with the process."
+    },
+    {
+      "lot": 190,
+      "truth": "PASS",
+      "p_fail": 0.219,
+      "verdict": "DEFER",
+      "reason": "uncertain: p_fail=0.22 sits in the abstention band (0.06, 0.25) \u2014 not confident enough to act",
+      "signals": [
+        {
+          "sensor": "sensor_103",
+          "z": 1.3
+        },
+        {
+          "sensor": "sensor_064",
+          "z": 2.0
+        },
+        {
+          "sensor": "sensor_059",
+          "z": 0.9
+        },
+        {
+          "sensor": "sensor_213",
+          "z": 1.4
+        },
+        {
+          "sensor": "sensor_045",
+          "z": 3.6
+        }
+      ],
+      "agent": "1. Hypothesis: The pattern of deviations in sensors 103, 064, 059, 213, and particularly the large deviation in sensor 045, suggests a potential issue with process consistency or stability, possibly indicating a shift in operating conditions. This deviation pattern may be related to a specific process step or equipment malfunction.\n2. Next check: Verify the historical data and recent maintenance records of the equipment associated with sensor 045 to determine if there have been any changes, calibrations, or issues that could explain its significant +3.6\u03c3 deviation."
+    },
+    {
+      "lot": 187,
+      "truth": "PASS",
+      "p_fail": 0.204,
+      "verdict": "DEFER",
+      "reason": "uncertain: p_fail=0.20 sits in the abstention band (0.06, 0.25) \u2014 not confident enough to act",
+      "signals": [
+        {
+          "sensor": "sensor_103",
+          "z": 2.8
+        },
+        {
+          "sensor": "sensor_064",
+          "z": 4.0
+        },
+        {
+          "sensor": "sensor_065",
+          "z": 3.3
+        },
+        {
+          "sensor": "sensor_510",
+          "z": 1.9
+        },
+        {
+          "sensor": "sensor_063",
+          "z": 3.4
+        }
+      ],
+      "agent": "1. Hypothesis: The pattern of deviations in sensors 063, 064, and 065, which are all significantly above normal, suggests a potential issue with a specific process step or module, given their similar and large deviations. This could indicate a localized problem rather than a widespread issue across the production line.\n\n2. Next check: Verify the historical data and maintenance records of the equipment or process module associated with sensors 063, 064, and 065 to see if there have been any recent changes, calibrations, or anomalies that could explain their concurrent deviations."
+    },
+    {
+      "lot": 846,
+      "truth": "PASS",
+      "p_fail": 0.124,
+      "verdict": "DEFER",
+      "reason": "uncertain: p_fail=0.12 sits in the abstention band (0.06, 0.25) \u2014 not confident enough to act",
+      "signals": [
+        {
+          "sensor": "sensor_213",
+          "z": 2.3
+        },
+        {
+          "sensor": "sensor_351",
+          "z": 2.5
+        },
+        {
+          "sensor": "sensor_081",
+          "z": -2.8
+        },
+        {
+          "sensor": "sensor_188",
+          "z": 2.3
+        },
+        {
+          "sensor": "sensor_014",
+          "z": -1.5
+        }
+      ],
+      "agent": "1. Hypothesis: The pattern of deviations in sensors 213, 351, 081, 188, and 014 suggests a process deviation that may be related to an unusual combination of factors, given the mix of positive and negative deviations. This could indicate an issue with a specific process step or equipment that is affecting multiple aspects of the production.\n\n2. Next check: Verify the historical data of sensor_081, which is deviating the most at -2.8\u03c3, to see if similar deviations have occurred in the past and how they correlated with the lot's outcome."
+    },
+    {
+      "lot": 907,
+      "truth": "PASS",
+      "p_fail": 0.013,
+      "verdict": "PASS",
+      "reason": "p_fail=0.01 <= 0.06",
+      "signals": [
+        {
+          "sensor": "sensor_103",
+          "z": -1.3
+        },
+        {
+          "sensor": "sensor_130",
+          "z": -1.9
+        },
+        {
+          "sensor": "sensor_180",
+          "z": 1.6
+        },
+        {
+          "sensor": "sensor_127",
+          "z": 2.6
+        },
+        {
+          "sensor": "sensor_059",
+          "z": -0.5
+        }
+      ],
+      "agent": null
+    },
+    {
+      "lot": 730,
+      "truth": "PASS",
+      "p_fail": 0.021,
+      "verdict": "PASS",
+      "reason": "p_fail=0.02 <= 0.06",
+      "signals": [
+        {
+          "sensor": "sensor_031",
+          "z": 1.9
+        },
+        {
+          "sensor": "sensor_213",
+          "z": -1.2
+        },
+        {
+          "sensor": "sensor_351",
+          "z": -1.2
+        },
+        {
+          "sensor": "sensor_310",
+          "z": -1.7
+        },
+        {
+          "sensor": "sensor_021",
+          "z": -1.4
+        }
+      ],
+      "agent": null
+    },
+    {
+      "lot": 1004,
+      "truth": "PASS",
+      "p_fail": 0.024,
+      "verdict": "PASS",
+      "reason": "p_fail=0.02 <= 0.06",
+      "signals": [
+        {
+          "sensor": "sensor_059",
+          "z": -1.0
+        },
+        {
+          "sensor": "sensor_129",
+          "z": -2.4
+        },
+        {
+          "sensor": "sensor_130",
+          "z": -1.3
+        },
+        {
+          "sensor": "sensor_103",
+          "z": -0.7
+        },
+        {
+          "sensor": "sensor_213",
+          "z": -1.0
+        }
+      ],
+      "agent": null
+    }
+  ]
+}
