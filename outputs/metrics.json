@@ -1,0 +1,11 @@
+{
+  "n_train": 1175,
+  "n_test": 392,
+  "fail_prevalence": 0.0664,
+  "n_features_used": 442,
+  "holdout_pr_auc": 0.2467,
+  "holdout_roc_auc": 0.8252,
+  "cv_pr_auc_train": 0.2003,
+  "t_low": 0.0584,
+  "t_high": 0.2451
+}
